@@ -1,0 +1,14 @@
+[package]
+name = "backend"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+actix-web = "4"
+serde = { version = "1.0", features = ["derive"] }
+tokio = {version="*", features = ["full"]}
+sqlx = {version="*", features = ["mysql","runtime-tokio-native-tls"]}
+argon2 = "*"
+lettre = { version = "0.10.0-beta.2", default-features = false, features = ["smtp-transport", "tokio1-rustls-tls", "hostname", "r2d2", "builder"] }
+actix-session = { version = "*", features = ["cookie-session"] }
+
